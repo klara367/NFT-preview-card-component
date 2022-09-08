@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --darkest-blue-BG:hsl(217, 54%, 11%);
+    --very-dark-blue-card: hsl(216, 50%, 16%);
+    --dark-blue-line: hsl(215, 32%, 27%);
+}
+
+/****** Layout-structure ******/
+
+body {
+    background-color: var(--darkest-blue-BG);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Outfit", sans-serif;
+}
+
+.card {
+    background-color: var(--very-dark-blue-card);
+    width: 350px;
+    border-radius: 15px;
+}
+
+.text-part {
+    margin-inline: 25px;
+}
+
+.limited-price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.description {
+    line-height: 25px;
+    margin-top: 20px;
+}
+
+/****** Main-image-styling ******/
+
+.equilibrium {
+    max-width: 300px;
+    margin: auto;
+    margin-top: 25px;
+    border-radius: 5px;
+}
+
+.equilibrium-img {
+    display: block;
+    max-width: inherit;
+    border-radius: inherit;
+    opacity: 1;
+}
+
+.equilibrium-view {
+    position: absolute;
+    top: 31.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.equilibrium:hover .equilibrium-img,
+.equilibrium:active .equilibrium-img{
+    opacity: 0.5;
+}
+
+.equilibrium:hover,
+.equilibrium:active {
+    background-color: var(--cyan);
+    cursor: pointer;
+}
+
+.equilibrium:hover .equilibrium-view,
+.equilibrium:active .equilibrium-view {
+    opacity: 1;
+}
+
+/****** H1-styling ******/
+
+h1 {
+    color: white;
+    font-weight: 600;
+    margin-top: 25px;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+}
+
+h1 a.nft-name:hover,
+h1 a.nft-name:active {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+/****** Paragraph-styling ******/
+
+p {
+    font-size: 1.125rem;
+    color: var(--soft-blue);
+    font-weight: 300;
+}
+
+/****** hrizontal-line-styling ******/
+
+hr {
+    background-color: var(--dark-blue-line);
+    height: 1px;
+    border: none;
+}
+
+/****** Price-section-styling ******/
+
+p.price {
+    color: var(--cyan);
+    font-weight: 400;
+}
+
+p.price::before {
+    content: url(./images/icon-ethereum.svg);
+    margin-right: 5px;
+    position: relative;
+    top: 2px;
+}
+
+p.time-limit::before {
+    content: url(./images/icon-clock.svg);
+    margin-right: 5px;
+    position: relative;
+    top: 2px;
+}
+
+/****** Author-details-styling ******/
+
+.author{
+    display: flex;
+}
+
+p.author-name {
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+.avatar {
+    width: 32px;
+    border: 1px solid white;
+    border-radius: 50%;
+    align-self: center;
+    margin-right: 15px;
+    margin-top: -15px;
+}
+
+a.author-details {
+    color: white;
+}
+
+a.author-details:hover,
+a.author-details:active {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+/****** Mobile-design ******/
+
+@media only screen and (max-width: 375px) {
+    .card{
+        max-width: 325px;
+    }
+
+    .equilibrium {
+        max-width: 280px;
+    }
+
+    .limited-price {
+
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .description {
+        margin-top: 15px;
+    }
+
+    p.author-name {
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    p {
+        font-size: 1rem;
+    }
+
+    .avatar {
+        margin-top: -10px;
+    }
+}
