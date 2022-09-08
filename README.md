@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://klara367.github.io/NFT-preview-card-component/](https://klara367.github.io/NFT-preview-card-component/)
 
 
 ### Built with
@@ -36,9 +36,6 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-
-
-
 
 ### Continued development
 
